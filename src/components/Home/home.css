@@ -1,0 +1,43 @@
+:root {
+    --fs-title-xl: 80px;
+    --fw-title-xl: 900;
+    --fs-title-n: 30px;
+    --fw-title-n: 700
+}
+
+.home__wrapper {
+    height: 90vh;
+    background-image: url(../../assets/youwon.gif);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    mix-blend-mode: multiply;
+
+}
+
+.hero__wrapper {
+    position: relative;
+    width: 40%;
+    top: 5%;
+    left: 5%;
+}
+
+.hero__title {
+    font-size: var(--fs-title-xl);
+    font-weight: var(--fw-title-xl);
+}
+
+.hero__wrapper p {
+    font-size: var(--fs-title-n);
+    font-weight: var(--fw-title-n);
+
+}
+
+.hero__wrapper button {
+    background-color: #D62E46;
+    color: white;
+    border: none;
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 8px;
+}

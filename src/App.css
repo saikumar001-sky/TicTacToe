@@ -1,42 +1,47 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root {
+  --value-fontsize: 20px
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.main__body {
+  height: 300px;
+  width: 300px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* outline: 10px solid #FF725E; */
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.restart__btn {
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  padding: 15px;
+  margin-top: 100px;
+  font-weight: 700;
+  background: #FF725E;
+  color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+button {
+  background-color: aliceblue;
+  font-size: var(--value-fontsize);
 }
 
-.card {
-  padding: 2em;
+button:hover {
+  color: white;
+  font-weight: 700;
+  border-radius: 8px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background: rgb(176, 141, 199);
+  background: linear-gradient(38deg, rgba(176, 141, 199, 1) 0%, rgba(227, 172, 172, 1) 61%, rgba(249, 219, 176, 1) 100%);
 }
-
-.read-the-docs {
-  color: #888;
+.win__value{
+  color: white;
+  font-weight: 700;
+  border-radius: 8px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background: rgb(176, 141, 199);
+  background: linear-gradient(38deg, rgba(176, 141, 199, 1) 0%, rgba(227, 172, 172, 1) 61%, rgba(249, 219, 176, 1) 100%);
 }
