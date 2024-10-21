@@ -1,8 +1,10 @@
 :root {
-    --fs-title-xl: 80px;
+    --fs-title-xl: 70px;
     --fw-title-xl: 900;
-    --fs-title-n: 30px;
-    --fw-title-n: 700
+    --fs-title-l: 35px;
+    --fw-title-l: 700;
+    --fs-title-n: 22px;
+    --fw-title-n: 600
 }
 
 .home__wrapper {
@@ -14,12 +16,16 @@
     mix-blend-mode: multiply;
 
 }
-
+.hero__wrapper__width{
+    width: 40%;
+}
+.play__wrapper__width{
+    width: 80%;
+}
 .hero__wrapper {
     position: relative;
-    width: 40%;
     top: 5%;
-    left: 5%;
+    left: 2%;
 }
 
 .hero__title {
@@ -28,8 +34,8 @@
 }
 
 .hero__wrapper p {
-    font-size: var(--fs-title-n);
-    font-weight: var(--fw-title-n);
+    font-size: var(--fs-title-l);
+    font-weight: var(--fw-title-l);
 
 }
 
@@ -40,4 +46,6 @@
     margin: 5px;
     padding: 10px 20px;
     border-radius: 8px;
+    font-size: var(--fs-title-n);
+    font-weight: var(--fw-title-n);
 }

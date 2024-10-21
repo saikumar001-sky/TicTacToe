@@ -9,9 +9,9 @@ export default function Button() {
 
     const updateBtnValues = (index) => {
         if (turn && !valuesArray[index]) {
-            valuesArray[index] = "X"
+            valuesArray[index] = "😀"
         } else if (!turn && !valuesArray[index]) {
-            valuesArray[index] = "O"
+            valuesArray[index] = "💗"
         } else {
             return
         }
@@ -48,10 +48,10 @@ export default function Button() {
     const checkSuccessCase = () => {
 
         valuesArray.map((ele, index) => {
-            if (ele == "X") {
+            if (ele == "😀") {
                 return winXConditions.push(index)
 
-            } else if (ele == "O") {
+            } else if (ele == "💗") {
                 return winOConditions.push(index)
             }
         })

@@ -1,15 +1,17 @@
 :root {
-  --value-fontsize: 20px
+  --value-fontsize: 80px
 }
 
 .main__body {
-  height: 300px;
-  width: 300px;
+  max-width: 90%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  /* outline: 10px solid #FF725E; */
+  grid-template-rows: 1fr 1fr 1fr;
+  max-height: 500px;
   border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  gap: 5px;
+  position: relative;
+  top: 20%;
 
 }
 
@@ -37,7 +39,8 @@ button:hover {
   background: rgb(176, 141, 199);
   background: linear-gradient(38deg, rgba(176, 141, 199, 1) 0%, rgba(227, 172, 172, 1) 61%, rgba(249, 219, 176, 1) 100%);
 }
-.win__value{
+
+.win__value {
   color: white;
   font-weight: 700;
   border-radius: 8px;
@@ -45,3 +48,12 @@ button:hover {
   background: rgb(176, 141, 199);
   background: linear-gradient(38deg, rgba(176, 141, 199, 1) 0%, rgba(227, 172, 172, 1) 61%, rgba(249, 219, 176, 1) 100%);
 }
+
+.multi__wrapper {
+  display: grid;
+  height: 98vh;
+  grid-template-columns: 1fr 1fr;
+
+}
+
+.multi__wrapper div {}

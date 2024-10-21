@@ -21,6 +21,7 @@ body {
 }
 
 button {
+  font-family: inherit;
   outline: invert;
   border: 1px solid rgb(209, 207, 207);
 }
