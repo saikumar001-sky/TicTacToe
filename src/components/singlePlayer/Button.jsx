@@ -2,12 +2,12 @@ import { useEffect, useState } from "react"
 
 export default function Button() {
     const [valuesArray, Setvalues] = useState(Array(9).fill(null))
-    const [turn, setTurn] = useState(true)
+    // const [turn, setTurn] = useState(true)
     const [isXwon, setXwon] = useState(false)
     const [isOwon, setOwon] = useState(false)
     const [winIndexes, setwinIndexes] = useState([])
 
-    const updateBtnValues = (index) => {
+    const updateBtnValues = async (index) => {
         if (turn && !valuesArray[index]) {
             valuesArray[index] = "😀"
         } else if (!turn && !valuesArray[index]) {
@@ -15,12 +15,16 @@ export default function Button() {
         } else {
             return
         }
-
         const newValues = [...valuesArray]
         Setvalues(newValues)
-        setTurn(!turn)
+        turn = !turn
         checkSuccessCase()
+        if (!turn) {
+            computerChance(index)
+        }
+
     }
+    let turn = true
     const winXConditions = []
     const winOConditions = []
     const successCases = [
@@ -33,6 +37,33 @@ export default function Button() {
         [0, 4, 8],
         [2, 4, 6]
     ]
+    const computerChance = (index) => {
+        successCases
+        const includedIndex = []
+        const availIndex = []
+        successCases.forEach((ele) => {
+            // let includeOppVal = 0
+            // let notIncludeOppVal = 0
+            // ele.forEach((index) => {
+            //     if(valuesArray[index]=="😀"){
+            //         includeOppVal++
+            //     }
+            // })
+            if (ele.includes(index)) {
+                includedIndex.push(ele)
+            }
+        })
+        includedIndex.forEach((ele) => {
+            ele.forEach((index) => {
+                if (!valuesArray[index]) {
+                    availIndex.push(index)
+                }
+            })
+        })
+        const randomIndex = availIndex[(Math.floor(Math.random() * availIndex.length))]
+        console.log(randomIndex)
+        updateBtnValues(randomIndex)
+    }
     const addClass = (index) => {
         if (isOwon) {
             if (winIndexes.includes(index)) {
@@ -71,6 +102,7 @@ export default function Button() {
             }
             return iswon
         })
+
     }
 
     return (
